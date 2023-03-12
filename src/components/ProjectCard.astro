@@ -1,0 +1,72 @@
+---
+export interface Props {
+	title: string;
+	description: string;
+  codelink: string;
+  livelink: string;
+  picture: string;
+}
+
+const { title, description, codelink, livelink, picture } = Astro.props;
+---
+<div class="flex">
+  <div class="left">
+    <img src={picture} />
+  </div>  
+  <div class="right">
+    <h2>{title}</h2>
+    <p>{description}</p>
+    <a href={codelink} target="_blank"><i class="fa-brands fa-github"></i></a>&nbsp;&nbsp;
+    <a href={livelink} target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+  </div>
+</div>
+
+<style>
+  img {
+    max-width: 100%;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    background-color: rgb(222, 228, 233);
+    opacity: .7;
+    padding: 20px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+
+  a {
+    font-size: 24px;
+  }
+
+  .flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left, .right {
+    flex: 1;
+  }
+
+  .right {
+    text-align: center;
+    margin: auto;
+  }
+
+  @media screen and (min-width: 800px) {
+    .flex {
+      flex-direction: row;
+    }
+    .reverse {
+      flex-direction: row-reverse;
+    }
+    .right {
+      text-align: right;
+      margin-left: -50px;
+    }
+  }
+</style>

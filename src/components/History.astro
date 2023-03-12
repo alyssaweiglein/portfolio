@@ -1,0 +1,106 @@
+<div id="history">
+  <div class="flex">
+    <div class="left">
+      <div class="time-container">
+        <h3>2021</h3>
+        <h5>Creative Marketing</h5>
+        <h6>Decal Express Studio</h6>
+        <p>Designed and produced unique and high-quality products. Applied effective 
+          SEO techniques and strategies to improve search engine rankings and increase 
+          website traffic.</p>
+      </div>
+    </div>
+
+    <div class="mid">
+
+    </div>
+    
+    <div class="right">
+      <br><br><br><br><br><br><br>
+      <div class="time-container">
+        <h3>2023</h3>
+        <h5>B.S., Computer Science</h5>
+        <h6>Western Governors University</h6>
+        <p>Studied: Data Structures & Algorithms, Discrete Mathematics, 
+          Operating Systems, Computer Architecture, Software Engineering, Web Development</p>
+        <p>Awarded: Excellence in Advanced Java Concepts</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  #history {
+  }
+
+  h3 {
+    opacity: .2;
+    margin-bottom: 6px;
+  }
+  
+  h5 {
+    text-transform: uppercase;
+  }
+
+  .time-container {
+    position: relative;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+
+  .left .time-container::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    right: -18.5px;
+    background-color: rgb(38, 41, 38);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .right .time-container::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: -18.5px;
+    background-color: rgb(38, 41, 38);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .left {
+    flex: 1;
+    text-align: right;
+    padding-right: 10px;
+  }
+
+  .right {
+    flex: 1;
+    padding-left: 10px;
+  }
+
+  .mid {
+    width: 3px;
+    background-color: rgb(34, 33, 33);
+    border-radius: 20px;
+  }
+
+  .left .time-container p {
+    font-size: .7em;
+    max-width: 340px;
+    margin-left: auto;
+    margin-top: 10px;
+  }
+
+  .right .time-container p {
+    font-size: .7em;
+    max-width: 340px;
+    margin-right: auto;
+    margin-top: 10px;
+  }
+
+</style>

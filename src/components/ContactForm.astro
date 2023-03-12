@@ -1,0 +1,63 @@
+---
+export interface Props {
+	linkedin: string;
+  email: string;
+}
+
+const { linkedin, email } = Astro.props;
+---
+<div id="contact-form">
+  <form>
+    <p> Connect with me on <a href={linkedin}>Linkedin</a>, 
+      send me an <a href={email}>email</a>, or send a quick 
+      note at the contact form below.</p>
+      <br><br>
+    <div class="flex">
+      <input type="text" placeholder="Name" />
+      <input type="text" placeholder="Email" />
+    </div>
+    <div class="flex">
+      <textarea rows="6" placeholder="Message"></textarea>
+    </div>
+    <button>Send</button>
+  </form>
+</div>
+
+<style>
+  form {
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  input, textarea {
+    flex-grow: 1;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgb(252, 252, 252);
+    border: 0;
+    font-family: 'Golos Text', sans-serif;
+    resize: none;
+    border-radius: 3px;
+  }
+
+  input:focus, textarea:focus {
+    outline: none;
+  }
+
+  button {
+    padding: 8px 20px;
+
+  }
+
+  .flex {
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  @media screen and (min-width: 600px) {
+    form {
+      max-width: 400px;
+    }
+  }
+</style>

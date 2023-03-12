@@ -1,0 +1,97 @@
+---
+import picture from "../images/IMG_4243-sm2.png";
+import SectionTitle from "./SectionTitle.astro";
+---
+<div id="about">
+  <div class="flex">
+    <div class="left">
+      <SectionTitle title="About Me" subtitle="The TL;DR version." />
+      <p>Hi, I'm Alyssa! Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Qui molestiae ullam voluptatem? Assumenda suscipit libero ut 
+        aliquam dolor laudantium magnam corrupti repudiandae, maxime 
+        itaque distinctio eveniet illum. Natus, harum labore?</p>
+      <br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Qui molestiae ullam voluptatem? Assumenda suscipit libero ut 
+        aliquam dolor laudantium magnam corrupti repudiandae, maxime 
+        itaque distinctio eveniet illum. Natus, harum labore?</p>
+      <div class="flex features">
+        <figure>
+          <img src="https://cdn-icons-png.flaticon.com/512/5165/5165391.png">
+          <figcaption>Dedicated</figcaption>
+        </figure>
+        <figure>
+          <img src="https://cdn-icons-png.flaticon.com/512/9186/9186519.png">
+          <figcaption>Adaptable</figcaption>
+        </figure>
+        <figure>
+          <img src="https://cdn-icons-png.flaticon.com/512/1323/1323780.png">
+          <figcaption>Motivated</figcaption>
+        </figure>
+        <figure>
+          <img src="https://cdn-icons-png.flaticon.com/512/2967/2967658.png">
+          <figcaption>Team Player</figcaption>
+        </figure>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore 
+        impedit fugit eligendi possimus quo, libero unde nihil quisquam sapiente 
+        sit necessitatibus nemo, praesentium, nesciunt ratione maxime suscipit? 
+        Ullam, illo.</p>
+    </div>
+    <div class="right">
+      <img src={picture} />
+    </div>
+  </div>
+</div>
+
+<style>
+  #about {
+  }
+  
+  .flex {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .features.flex {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+
+  .right img {
+    max-width: 340px;
+  }
+
+  .left img {
+    height: 40px;
+  }
+
+  figure {
+    text-align: center;
+    background-color: rgb(247, 247, 247);
+    padding: 10px;
+    width: 80px;
+    border-radius: 6px;
+  }
+
+  figcaption {
+    margin-top: 6px;
+    font-size: .6em;
+  }
+
+  p {
+    font-size: smaller;
+  }
+  
+  @media screen and (min-width: 864px) {
+    .flex {
+      flex-direction: row;
+    }
+
+    .left {
+      padding-right: 100px;
+    }
+  }
+</style>

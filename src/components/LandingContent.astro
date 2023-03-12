@@ -1,0 +1,28 @@
+---
+export interface Props {
+	name: string;
+  description: string;
+  link: string;
+}
+
+const { name, description, link } = Astro.props;
+---
+<h3>Hello, I'm</h3>
+<h1>{name}</h1>
+<h4>{description}</h4>
+<a href={link}>See my work</a>
+
+<style>
+  #landing {
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  p{
+    max-width: 700px;
+  }
+  h1 {
+    font-size: 5em;
+  }
+</style>
