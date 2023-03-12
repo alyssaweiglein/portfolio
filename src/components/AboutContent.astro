@@ -1,0 +1,11 @@
+---
+export interface Props {
+	paragraph1: string;
+  paragraph2: string;
+}
+
+const { paragraph1, paragraph2 } = Astro.props;
+---
+
+<p>{paragraph1}</p>
+<p>{paragraph2}</p>

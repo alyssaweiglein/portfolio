@@ -1,46 +1,46 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SectionTitle from '../components/SectionTitle.astro';
-import Projects from '../components/Projects.astro';
 import ContactForm from '../components/ContactForm.astro';
-import About from '../components/About.astro';
-import History from '../components/History.astro';
-import Landing from '../components/Landing.astro';
+import HistorySection from '../components/HistorySection.astro';
+import AboutSection from '../components/AboutSection.astro';
+import ProjectSection from '../components/ProjectSection.astro';
+import LandingSection from '../components/LandingSection.astro';
+import ContactSection from '../components/ContactSection.astro';
 ---
 
 <Layout title="Title">
 	<div class="container">
 
 		<div id="landing">
-			<Landing />
+			<LandingSection />
 		</div>
 
 		<section id="about">
-			<About />
+			<AboutSection />
 		</section>
 
 		<section id="history">
 			<center>
 				<SectionTitle title="History" subtitle="Education + Employment" />
 			</center>
-			<History />
+			<HistorySection />
 		</section>
 
 		<section id="portfolio">
 			<SectionTitle title="My Recent Work" subtitle="Apps built with maintanable code that provide enjoyable and accessible user experiences." />
-			<Projects />
+			<ProjectSection />
 		</section>
 
 		<section id="contact">
 			<center>
 				<SectionTitle title="Contact" subtitle="I'm always happy to meet new people." />
 			</center>
-			<ContactForm />
+			<ContactSection />
 		</section>
 	</div>
 </Layout>
 
 <style>
-	#history {
-	}
+
 </style>

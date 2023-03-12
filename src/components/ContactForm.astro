@@ -6,22 +6,30 @@ export interface Props {
 
 const { linkedin, email } = Astro.props;
 ---
-<div id="contact-form">
-  <form>
-    <p> Connect with me on <a href={linkedin}>Linkedin</a>, 
-      send me an <a href={email}>email</a>, or send a quick 
-      note at the contact form below.</p>
-      <br><br>
-    <div class="flex">
-      <input type="text" placeholder="Name" />
-      <input type="text" placeholder="Email" />
-    </div>
-    <div class="flex">
-      <textarea rows="6" placeholder="Message"></textarea>
-    </div>
-    <button>Send</button>
-  </form>
-</div>
+
+<form 
+  name="contact" 
+  action="/pages/success" 
+  method="POST" 
+  netlify-honeypot="bot-field" 
+  data-netlify="true">
+  <p>Connect with me on <a href={linkedin} target="_blank">Linkedin</a>, 
+    send me an <a href={email} target="_blank">email</a>, or send a quick 
+    note at the contact form below.</p>
+    <br><br>
+  <div class="flex">
+    <input type="text" name="name" placeholder="Name" />
+    <input type="email" name="email" placeholder="Email" />
+  </div>
+  <div class="flex">
+    <textarea rows="5" name="message" placeholder="Message"></textarea>
+  </div>
+  <div class="flex">
+    <input id="bot-field" name="bot-field" placeholder="Don't type anything here if you're human." />
+  </div>
+  <button type="submit">Send</button>
+</form>
+
 
 <style>
   form {
@@ -45,9 +53,11 @@ const { linkedin, email } = Astro.props;
     outline: none;
   }
 
+  #bot-field {
+    background-color: rgb(231, 231, 231);
+  }
   button {
     padding: 8px 20px;
-
   }
 
   .flex {

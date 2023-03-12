@@ -1,0 +1,22 @@
+---
+import LandingContent from './LandingContent.astro';
+---
+
+<div id="landing">
+  <LandingContent 
+    name="Alyssa Weiglein"
+    description="lorem"
+    link="#portfolio"
+  />
+</div>
+
+<style>
+  #landing {
+    min-height: 200px;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+</style>
